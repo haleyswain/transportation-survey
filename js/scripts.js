@@ -6,6 +6,11 @@ $(document).ready(function() {
       var workTransportationMode = $(this).val ();
       $('#work_responses').append(workTransportationMode + "<br>");
     });
-    $('transportation_survey').hide();
+    $("#fun_responses").show()
+    $("input:checkbox[name=fun_transportation]:checked").each(function() {
+      var funTransportationMode = $(this).val();
+      $('#fun_responses').append(funTransportationMode + "<br>");
+    });
+    $('#transportation_survey').hide();
   });
 });
